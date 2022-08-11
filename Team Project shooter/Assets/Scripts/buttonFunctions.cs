@@ -7,7 +7,7 @@ public class buttonFunctions : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    /*
+    
     public void resume()
     {
         
@@ -20,13 +20,13 @@ public class buttonFunctions : MonoBehaviour
     }
 
 
-    public void respawn()
-    {
-        gameManager.instance.playerScript.resetHP();
-        gameManager.instance.playerScript.respawn();
-        gameManager.instance.menuCurrentlyOpen.SetActive(false);
+    //public void respawn()
+    //{
+    //    gameManager.instance.playerScript.resetHP();
+    //    gameManager.instance.playerScript.respawn();
+    //    gameManager.instance.menuCurrentlyOpen.SetActive(false);
 
-    }
+    //}
 
     public void quit()
     {
@@ -43,5 +43,5 @@ public class buttonFunctions : MonoBehaviour
 
 
 
-    */
+    
 }

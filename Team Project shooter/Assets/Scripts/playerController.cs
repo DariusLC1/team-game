@@ -13,6 +13,7 @@ public class playerController : MonoBehaviour
     [Range(8, 18)][SerializeField] float jumpHeight;
     [Range(15, 30)][SerializeField] float gravity;
     [Range(1, 3)][SerializeField] int jumpsMax;
+    [Range(0, 10)]public int HP;
 
     private Vector3 playerVelocity;
     Vector3 move = Vector3.zero;
