@@ -15,16 +15,19 @@ public class playerController : MonoBehaviour
     [Range(1, 3)][SerializeField] int jumpsMax;
     [Range(0, 10)]public int HP;
 
+
     private Vector3 playerVelocity;
     Vector3 move = Vector3.zero;
     int timesJumped;
     float playerSpeedOriginal;
     bool isSprinting = false;
+    int HPOrig;
 
 
     // Start is called before the first frame update
     void Start()
     {
+        HPOrig = HP;
         playerSpeedOriginal = playerSpeed;
 
     }
@@ -32,6 +35,11 @@ public class playerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            takeDamage(1);
+        }
+
         playerMovement();
         Sprint();
     }
@@ -74,4 +82,32 @@ public class playerController : MonoBehaviour
             playerSpeed = playerSpeedOriginal;
         }
     }
+
+    public void takeDamage(int dmg)
+    {
+        HP -= dmg;
+        
+
+        if (HP <= 0)
+        {
+            death();
+
+
+        }
+    }
+
+    public void death()
+    {
+        gameManager.instance.cursorLockPause();
+        gameManager.instance.menuOpen = gameManager.instance.playerDeadMenu;
+        gameManager.instance.menuOpen.SetActive(true);
+    }
+
+    public void resetHP()
+    {
+        HP = HPOrig;
+    }
+
+
+
 }

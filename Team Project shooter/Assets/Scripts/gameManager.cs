@@ -12,6 +12,7 @@ public class gameManager : MonoBehaviour
     //Menu Variables
     public GameObject pauseMenu;
     public GameObject menuOpen;
+    public GameObject playerDeadMenu;
 
 
     public bool isPaused;
