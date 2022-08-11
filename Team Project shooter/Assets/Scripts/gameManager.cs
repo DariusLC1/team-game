@@ -9,7 +9,10 @@ public class gameManager : MonoBehaviour
     public GameObject player;
     public playerController playerScript;
     public GameObject playerSpawnPos;
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
     // Start is called before the first frame update
     void Awake()
     {
